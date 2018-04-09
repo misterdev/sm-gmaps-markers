@@ -12,9 +12,32 @@
        * element that contains the map. */
         
         #map {
-            height: 90%;
+            height: calc(100% - 46px);
         }
-        /* Optional: Makes the sample page fill the window. */
+        
+        .header {
+            width: 100%;
+            height: 46px;
+            padding: 10px;
+            background-color: cadetblue;
+            display: flex;
+            justify-content: space-around;
+            z-index: 1000;
+        }
+        
+        button {
+            position: relative;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background: beige;
+            color: cadetblue;
+            padding: 10px 20px;
+            border-radius: 2px;
+            font-size: 16px;
+            font-weight: 600;
+            min-width: 200px;
+        }
         
         html,
         body {
@@ -26,6 +49,11 @@
 </head>
 
 <body>
+    <div class="header">
+        <button id="markers-btn">Markers</button>
+        <button id="heatmap-btn">HeatMap</button>
+        <button id="cluster-btn">Cluster Markers</button>
+    </div>
     <div id="map"></div>
 </body>
 
