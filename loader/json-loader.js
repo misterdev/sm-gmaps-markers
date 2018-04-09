@@ -1,0 +1,1 @@
+module.exports = (source) => source = source.replace(/Nome/g, 'name')
