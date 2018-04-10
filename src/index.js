@@ -81,7 +81,7 @@ class MyMap {
 
     toggleClusterMarkers() {
         this.showCluster = !this.showCluster
-        if (!this.cluster) {
+        if (this.showCluster) {
             this.cluster = new MarkerClusterer(this.map, this.markers, {
                 gridSize: 100,
                 zoomOnClick: true,
@@ -91,7 +91,8 @@ class MyMap {
                 }
             })
         } else {
-            this.showCluster ? this.cluster.redraw() : this.cluster.resetViewport()
+            this.showMarkers = false
+            this.cluster.clearMarkers()
         }
     }
 }
