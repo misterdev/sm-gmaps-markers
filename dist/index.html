@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        SM Maps Markers
+    </title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        
+        #map {
+            height: calc(100% - 46px);
+        }
+        
+        .header {
+            width: 100%;
+            height: 46px;
+            padding: 10px;
+            background-color: cadetblue;
+            display: flex;
+            justify-content: space-around;
+            z-index: 1000;
+        }
+        
+        button {
+            position: relative;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background: beige;
+            color: cadetblue;
+            padding: 10px 20px;
+            border-radius: 2px;
+            font-size: 16px;
+            font-weight: 600;
+            min-width: 200px;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <button id="markers-btn">Markers</button>
+        <button id="heatmap-btn">HeatMap</button>
+        <button id="cluster-btn">Cluster Markers</button>
+    </div>
+    <div id="map"></div>
+<script type="text/javascript" src="main.js"></script></body>
+
+</html>
